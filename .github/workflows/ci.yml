@@ -7,15 +7,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Update
-        run: uptime
+      - name: checkout codes
+        uses: actions/checkout@v4
+      - name: Build image
+        run: docker build -t PraiseAddy2022/ciportfolio .
+      - name: list images
+        run: docker images  
 
-      - name: Number processor
-        run: nproc
-
-  test:
-    needs: [build]
-    runs-on: ubuntu-latest
-    steps:
-      - name: hello
-        run: echo hellow 
+     
