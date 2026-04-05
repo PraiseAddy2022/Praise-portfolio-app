@@ -1,0 +1,20 @@
+name: My first Pipeline
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update
+        run: uptime
+
+      - name: Number processor
+        run: nproc
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: hello
+        run: echo hellow 
