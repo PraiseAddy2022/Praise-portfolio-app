@@ -10,7 +10,7 @@ jobs:
       - name: checkout codes
         uses: actions/checkout@v4
       - name: Build image
-        run: docker build -t PraiseAddy2022/ciportfolio .
+        run: docker build -t ${{secrets.DOCKER_USERNAME}}/ciportfolio .
       - name: list images
         run: docker images  
 
