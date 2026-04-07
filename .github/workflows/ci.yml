@@ -21,7 +21,7 @@ jobs:
         
         - name: Push image to registry
           run: |
-           docker push ${{secrets.DOCKER_USERNAME}}/myprofile:${{github.run_number}} .   
+           docker push ${{secrets.DOCKER_USERNAME}}/myprofile:${{github.run_number}} 
            docker push ${{secrets.DOCKER_USERNAME}}/myprofile
  
 
