@@ -33,8 +33,8 @@ jobs:
           with:
             host: ${{ secrets.HOST }}
             username: ${{ secrets.SSH_USERNAME }}
-            key: ${{ secrets.PRIVATE_KEY}}
+            key: ${{ secrets.PRAVITE_KEY}}
             script: |
-              docker rm -f myprofile || echo " container not fornd, skip removal ."
+              docker rm -f profile || echo " container not fornd, skip removal ."
               docker run -d --name profile -p 8080:80 ${{secrets.DOCKER_USERNAME}}/myprofile
       
